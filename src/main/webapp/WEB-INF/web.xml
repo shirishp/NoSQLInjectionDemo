@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <display-name>SecureFind</display-name>
+        <servlet-name>SecureFind</servlet-name>
+        <servlet-class>nosql.injection.demo.controller.SecureFinder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecureFind</servlet-name>
+        <url-pattern>/secure-find</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>InsecureFind</display-name>
+        <servlet-name>InsecureFind</servlet-name>
+        <servlet-class>nosql.injection.demo.controller.InsecureFinder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsecureFind</servlet-name>
+        <url-pattern>/insecure-find</url-pattern>
+    </servlet-mapping>
+
+</web-app>
