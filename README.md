@@ -16,3 +16,4 @@ An application to demo NoSQL Injection attack on MongoDB
   * `Robb', 'address':'Kingslayer`
   * `Robb', $where: 'function(){print("Testing"); return this.name == "Robb"}'})`
   * `Robb', $where: 'function(){sleep(5000); return this.name == "Robb"}'})`
+  * `Robb', name:{$ne:'Robb'}, address:'Kingslayer`

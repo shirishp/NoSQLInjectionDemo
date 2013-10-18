@@ -14,7 +14,7 @@
     <h1>Search by name</h1>
     <table>
         <tr>
-            <td><label for="name">Name:</label></td><td><input type="text" id="name" name="name"></td>
+            <td><label for="name">Name:</label></td><td><input type="text" id="name" name="name" size="100"></td>
         </tr>
     </table>
 </form>
