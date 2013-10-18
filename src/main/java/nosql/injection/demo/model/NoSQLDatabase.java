@@ -28,7 +28,7 @@ public class NoSQLDatabase {
         DBObject databaseQuery = (DBObject) JSON.parse(stringQuery);
         injectionResult.setDatabaseQuery(databaseQuery);
 
-        DBObject result = characters.findOne(databaseQuery);
+        DBCursor result = characters.find(databaseQuery);
         injectionResult.setResult(result);
 
         return injectionResult;
@@ -42,7 +42,7 @@ public class NoSQLDatabase {
         BasicDBObject databaseQuery = new BasicDBObject("name", name);
         injectionResult.setDatabaseQuery(databaseQuery);
 
-        DBObject result = characters.findOne(databaseQuery);
+        DBCursor result = characters.find(databaseQuery);
         injectionResult.setResult(result);
 
         return injectionResult;
@@ -65,8 +65,16 @@ public class NoSQLDatabase {
     private void seedData() {
         BasicDBObject robb = new BasicDBObject("_id", 1).append("name", "Robb").append("surname", "Stark").append("address", "Kingslayer");
         BasicDBObject sansa = new BasicDBObject("_id", 2).append("name", "Sansa").append("surname", "Stark").append("address", "Kingslayer");
+        BasicDBObject tyrion = new BasicDBObject("_id", 3).append("name", "Tyrion").append("surname", "Lannister").append("address", "Casterly Rock");
+        BasicDBObject jaime = new BasicDBObject("_id", 4).append("name", "Jaime").append("surname", "Lannister").append("address", "Casterly Rock");
+        BasicDBObject cersei = new BasicDBObject("_id", 5).append("name", "Cersei").append("surname", "Lannister").append("address", "Casterly Rock");
+        BasicDBObject tywin = new BasicDBObject("_id", 6).append("name", "Tywin").append("surname", "Lannister").append("address", "Casterly Rock");
         characters.insert(robb);
         characters.insert(sansa);
+        characters.insert(tyrion);
+        characters.insert(jaime);
+        characters.insert(cersei);
+        characters.insert(tywin);
     }
 
 }
